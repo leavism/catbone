@@ -1614,53 +1614,55 @@ local theme = lush(function(injected_functions)
 		lualine_x_diff_removed_terminal({ gui = "nocombine", bg = mantle, fg = red }), -- lualine_x_diff_removed_terminal xxx gui=nocombine guifg=#f38ba8 guibg=#181825
 		lualine_x_diff_removed_inactive({ gui = "nocombine", bg = mantle, fg = red }), -- lualine_x_diff_removed_inactive xxx gui=nocombine guifg=#f38ba8 guibg=#181825
 
-		BufferLineGroupSeparator({ bg = "#101019", fg = overlay2 }), -- BufferLineGroupSeparator xxx guifg=#9399b2 guibg=#101019
-		BufferLineTruncMarker({ bg = "#101019", fg = overlay2 }), -- BufferLineTruncMarker xxx guifg=#9399b2 guibg=#101019
-		BufferLineDiagnostic({ bg = mantle, fg = subtext0 }), -- BufferLineDiagnostic xxx guifg=#a6adc8 guibg=#181825
-		BufferLineError({ bg = mantle, fg = red, sp = red }), -- BufferLineError xxx guifg=#f38ba8 guibg=#181825 guisp=#f38ba8
+		BufferLineGroupSeparator({ bg = crust, fg = overlay2 }), -- BufferLineGroupSeparator xxx guifg=#9399b2 guibg=#101019
+		BufferLineTruncMarker({ bg = crust, fg = overlay2 }), -- BufferLineTruncMarker xxx guifg=#9399b2 guibg=#101019
 		BufferLineNumbers({ bg = mantle, fg = subtext0 }), -- BufferLineNumbers xxx guifg=#a6adc8 guibg=#181825
-		BufferLineBuffer({ bg = "#161622", fg = overlay2 }), -- BufferLineBuffer xxx guifg=#9399b2 guibg=#161622
+		BufferLineBuffer({ bg = crust, fg = overlay2 }), -- BufferLineBuffer xxx guifg=#9399b2 guibg=#161622
 		BufferLineTab({ bg = mantle, fg = surface1 }), -- BufferLineTab  xxx guifg=#45475a guibg=#181825
+		BufferLineDiagnostic({ bg = mantle, fg = subtext0 }), -- BufferLineDiagnostic xxx guifg=#a6adc8 guibg=#181825
+		BufferLineDiagnosticSelected({ gui = "bold,italic", bg = base, fg = subtext0 }), -- BufferLineDiagnosticSelected xxx cterm=bold,italic gui=bold,italic guifg=#a6adc8 guibg=#1e1e2e
+		BufferLineDiagnosticVisible({ bg = mantle, fg = subtext0 }), -- BufferLineDiagnosticVisible xxx guifg=#a6adc8 guibg=#181825
 		BufferLineWarning({ bg = mantle, fg = yellow, sp = yellow }), -- BufferLineWarning xxx guifg=#f9e2af guibg=#181825 guisp=#f9e2af
-		BufferLineNumbersVisible({ bg = mantle, fg = subtext0 }), -- BufferLineNumbersVisible xxx guifg=#a6adc8 guibg=#181825
-		BufferLineTabClose({ bg = mantle, fg = red }), -- BufferLineTabClose xxx guifg=#f38ba8 guibg=#181825
-		BufferLineFill({ bg = "#11111b", fg = overlay2 }), -- BufferLineFill xxx guifg=#9399b2 guibg=#11111b
-		BufferLineTabSeparatorSelected({ bg = base, fg = "#11111b" }), -- BufferLineTabSeparatorSelected xxx guifg=#11111b guibg=#1e1e2e
-		BufferLineTabSeparator({ bg = mantle, fg = "#11111b" }), -- BufferLineTabSeparator xxx guifg=#11111b guibg=#181825
-		BufferLineTabSelected({ bg = base, fg = sky }), -- BufferLineTabSelected xxx guifg=#89dceb guibg=#1e1e2e
-		BufferLineHintDiagnostic({ bg = mantle, fg = teal, sp = "#6fa99f" }), -- BufferLineHintDiagnostic xxx guifg=#94e2d5 guibg=#181825 guisp=#6fa99f
-		BufferLineHintVisible({ bg = mantle, fg = teal }), -- BufferLineHintVisible xxx guifg=#94e2d5 guibg=#181825
-		BufferLineBackground({ bg = mantle, fg = overlay2 }), -- BufferLineBackground xxx guifg=#9399b2 guibg=#181825
-		BufferLineInfoDiagnosticVisible({ bg = mantle, fg = sky }), -- BufferLineInfoDiagnosticVisible xxx guifg=#89dceb guibg=#181825
-		BufferLineInfoDiagnostic({ bg = mantle, fg = sky, sp = "#66a5b0" }), -- BufferLineInfoDiagnostic xxx guifg=#89dceb guibg=#181825 guisp=#66a5b0
-		BufferLineInfoSelected({ gui = "bold,italic", bg = base, fg = sky, sp = sky }), -- BufferLineInfoSelected xxx cterm=bold,italic gui=bold,italic guifg=#89dceb guibg=#1e1e2e guisp=#89dceb
-		BufferLineInfoVisible({ bg = mantle, fg = sky }), -- BufferLineInfoVisible xxx guifg=#89dceb guibg=#181825
-		BufferLineWarningDiagnosticSelected({ bg = base, fg = yellow, sp = "#baa983" }), -- BufferLineWarningDiagnosticSelected xxx guifg=#f9e2af guibg=#1e1e2e guisp=#baa983
-		BufferLineWarningDiagnosticVisible({ bg = mantle, fg = yellow }), -- BufferLineWarningDiagnosticVisible xxx guifg=#f9e2af guibg=#181825
-		BufferLineHint({ bg = mantle, fg = teal, sp = teal }), -- BufferLineHint xxx guifg=#94e2d5 guibg=#181825 guisp=#94e2d5
 		BufferLineWarningSelected({ gui = "bold,italic", bg = base, fg = yellow, sp = yellow }), -- BufferLineWarningSelected xxx cterm=bold,italic gui=bold,italic guifg=#f9e2af guibg=#1e1e2e guisp=#f9e2af
 		BufferLineWarningVisible({ bg = mantle, fg = yellow }), -- BufferLineWarningVisible xxx guifg=#f9e2af guibg=#181825
+		BufferLineWarningDiagnostic({ bg = mantle, fg = yellow, sp = yellow.da(20) }), -- BufferLineWarningDiagnostic xxx guifg=#f9e2af guibg=#181825 guisp=#baa983
+		BufferLineWarningDiagnosticSelected({ bg = base, fg = yellow, sp = yellow.da(20) }), -- BufferLineWarningDiagnosticSelected xxx guifg=#f9e2af guibg=#1e1e2e guisp=#baa983
+		BufferLineWarningDiagnosticVisible({ bg = mantle, fg = yellow }), -- BufferLineWarningDiagnosticVisible xxx guifg=#f9e2af guibg=#181825
+		BufferLineHint({ bg = mantle, fg = overlay2, sp = teal }), -- BufferLineHint xxx guifg=#94e2d5 guibg=#181825 guisp=#94e2d5
+		BufferLineHintSelected({ gui = "bold", bg = base, fg = blue, sp = blue.da(20) }), -- BufferLineHintSelected xxx cterm=bold,italic gui=bold,italic guifg=#94e2d5 guibg=#1e1e2e guisp=#94e2d5
+		BufferLineHintVisible({ bg = mantle, fg = teal }), -- BufferLineHintVisible xxx guifg=#94e2d5 guibg=#181825
+		BufferLineHintDiagnostic({ bg = mantle, fg = teal, sp = teal.da(20) }), -- BufferLineHintDiagnostic xxx guifg=#94e2d5 guibg=#181825 guisp=#6fa99f
+		BufferLineHintDiagnosticSelected({ bg = base, fg = teal, sp = teal.da(20) }), -- BufferLineHintDiagnosticSelected xxx guifg=#94e2d5 guibg=#1e1e2e guisp=#6fa99f
+		BufferLineHintDiagnosticVisible({ bg = mantle, fg = teal }), -- BufferLineHintDiagnosticVisible xxx guifg=#94e2d5 guibg=#181825
+		BufferLineError({ bg = mantle, fg = red, sp = red }), -- BufferLineError xxx guifg=#f38ba8 guibg=#181825 guisp=#f38ba8
 		BufferLineErrorDiagnosticSelected({ bg = base, fg = red, sp = "#b6687e" }), -- BufferLineErrorDiagnosticSelected xxx guifg=#f38ba8 guibg=#1e1e2e guisp=#b6687e
 		BufferLineErrorDiagnosticVisible({ bg = mantle, fg = red }), -- BufferLineErrorDiagnosticVisible xxx guifg=#f38ba8 guibg=#181825
 		BufferLineErrorDiagnostic({ bg = mantle, fg = red, sp = "#b6687e" }), -- BufferLineErrorDiagnostic xxx guifg=#f38ba8 guibg=#181825 guisp=#b6687e
 		BufferLineErrorSelected({ gui = "bold,italic", bg = base, fg = red, sp = red }), -- BufferLineErrorSelected xxx cterm=bold,italic gui=bold,italic guifg=#f38ba8 guibg=#1e1e2e guisp=#f38ba8
 		BufferLineErrorVisible({ bg = mantle, fg = red }), -- BufferLineErrorVisible xxx guifg=#f38ba8 guibg=#181825
-		BufferLineNumbersSelected({ gui = "bold,italic", bg = base, fg = subtext0 }), -- BufferLineNumbersSelected xxx cterm=bold,italic gui=bold,italic guifg=#a6adc8 guibg=#1e1e2e
 		BufferLineInfo({ bg = mantle, fg = sky, sp = sky }), -- BufferLineInfo xxx guifg=#89dceb guibg=#181825 guisp=#89dceb
-		BufferLineHintSelected({ gui = "bold,italic", bg = base, fg = teal, sp = teal }), -- BufferLineHintSelected xxx cterm=bold,italic gui=bold,italic guifg=#94e2d5 guibg=#1e1e2e guisp=#94e2d5
-		BufferLineSeparator({ bg = mantle, fg = "#11111b" }), -- BufferLineSeparator xxx guifg=#11111b guibg=#181825
+		BufferLineInfoSelected({ gui = "bold,italic", bg = base, fg = sky, sp = sky }), -- BufferLineInfoSelected xxx cterm=bold,italic gui=bold,italic guifg=#89dceb guibg=#1e1e2e guisp=#89dceb
+		BufferLineInfoVisible({ bg = mantle, fg = sky }), -- BufferLineInfoVisible xxx guifg=#89dceb guibg=#181825
+		BufferLineInfoDiagnostic({ bg = mantle, fg = sky, sp = sky.da(20) }), -- BufferLineInfoDiagnostic xxx guifg=#89dceb guibg=#181825 guisp=#66a5b0
+		BufferLineInfoDiagnosticVisible({ bg = mantle, fg = sky }), -- BufferLineInfoDiagnosticVisible xxx guifg=#89dceb guibg=#181825
+		BufferLineInfoDiagnosticSelected({ bg = base, fg = sky, sp = sky.da(20) }), -- BufferLineInfoDiagnosticSelected xxx guifg=#89dceb guibg=#1e1e2e guisp=#66a5b0
+		BufferLineNumbersVisible({ bg = mantle, fg = subtext0 }), -- BufferLineNumbersVisible xxx guifg=#a6adc8 guibg=#181825
+		BufferLineTabClose({ bg = mantle, fg = red }), -- BufferLineTabClose xxx guifg=#f38ba8 guibg=#181825
+		BufferLineFill({ bg = crust, fg = overlay2 }), -- BufferLineFill xxx guifg=#9399b2 guibg=#11111b
+		BufferLineTabSeparatorSelected({ bg = base, fg = crust }), -- BufferLineTabSeparatorSelected xxx guifg=#11111b guibg=#1e1e2e
+		BufferLineTabSeparator({ bg = mantle, fg = crust }), -- BufferLineTabSeparator xxx guifg=#11111b guibg=#181825
+		BufferLineTabSelected({ bg = base, fg = sky }), -- BufferLineTabSelected xxx guifg=#89dceb guibg=#1e1e2e
+		BufferLineBackground({ bg = mantle, fg = overlay2 }), -- BufferLineBackground xxx guifg=#9399b2 guibg=#181825
+		BufferLineNumbersSelected({ gui = "bold,italic", bg = base, fg = subtext0 }), -- BufferLineNumbersSelected xxx cterm=bold,italic gui=bold,italic guifg=#a6adc8 guibg=#1e1e2e
+		BufferLineSeparator({ bg = mantle, fg = crust }), -- BufferLineSeparator xxx guifg=#11111b guibg=#181825
 		BufferLineCloseButtonVisible({ bg = mantle, fg = surface1 }), -- BufferLineCloseButtonVisible xxx guifg=#45475a guibg=#181825
 		BufferLineCloseButton({ bg = mantle, fg = surface1 }), -- BufferLineCloseButton xxx guifg=#45475a guibg=#181825
-		BufferLineOffsetSeparator({ bg = base, fg = "#11111b" }), -- BufferLineOffsetSeparator xxx guifg=#11111b guibg=#1e1e2e
-		BufferLineSeparatorSelected({ bg = base, fg = "#11111b" }), -- BufferLineSeparatorSelected xxx guifg=#11111b guibg=#1e1e2e
-		BufferLineSeparatorVisible({ bg = mantle, fg = "#11111b" }), -- BufferLineSeparatorVisible xxx guifg=#11111b guibg=#181825
+		BufferLineOffsetSeparator({ bg = base, fg = crust }), -- BufferLineOffsetSeparator xxx guifg=#11111b guibg=#1e1e2e
+		BufferLineSeparatorSelected({ bg = base, fg = crust }), -- BufferLineSeparatorSelected xxx guifg=#11111b guibg=#1e1e2e
+		BufferLineSeparatorVisible({ bg = mantle, fg = crust }), -- BufferLineSeparatorVisible xxx guifg=#11111b guibg=#181825
 		BufferLineIndicatorSelected({ gui = "bold,italic", bg = base, fg = peach }), -- BufferLineIndicatorSelected xxx cterm=bold,italic gui=bold,italic guifg=#fab387 guibg=#1e1e2e
 		BufferLineIndicatorVisible({ gui = "bold,italic", bg = mantle, fg = peach }), -- BufferLineIndicatorVisible xxx cterm=bold,italic gui=bold,italic guifg=#fab387 guibg=#181825
 		BufferLineModifiedVisible({ bg = mantle, fg = peach }), -- BufferLineModifiedVisible xxx guifg=#fab387 guibg=#181825
-		BufferLineDiagnosticSelected({ gui = "bold,italic", bg = base, fg = subtext0 }), -- BufferLineDiagnosticSelected xxx cterm=bold,italic gui=bold,italic guifg=#a6adc8 guibg=#1e1e2e
-		BufferLineDiagnosticVisible({ bg = mantle, fg = subtext0 }), -- BufferLineDiagnosticVisible xxx guifg=#a6adc8 guibg=#181825
-		BufferLineHintDiagnosticSelected({ bg = base, fg = teal, sp = "#6fa99f" }), -- BufferLineHintDiagnosticSelected xxx guifg=#94e2d5 guibg=#1e1e2e guisp=#6fa99f
-		BufferLineHintDiagnosticVisible({ bg = mantle, fg = teal }), -- BufferLineHintDiagnosticVisible xxx guifg=#94e2d5 guibg=#181825
 		BufferLineDuplicate({ gui = "bold,italic", bg = mantle, fg = surface1 }), -- BufferLineDuplicate xxx cterm=bold,italic gui=bold,italic guifg=#45475a guibg=#181825
 		BufferLineDuplicateVisible({ gui = "bold,italic", bg = mantle, fg = surface1 }), -- BufferLineDuplicateVisible xxx cterm=bold,italic gui=bold,italic guifg=#45475a guibg=#181825
 		BufferLineDuplicateSelected({ gui = "bold,italic", bg = base, fg = text }), -- BufferLineDuplicateSelected xxx cterm=bold,italic gui=bold,italic guifg=#cdd6f4 guibg=#1e1e2e
@@ -1669,13 +1671,12 @@ local theme = lush(function(injected_functions)
 		BufferLineModifiedSelected({ bg = base, fg = peach }), -- BufferLineModifiedSelected xxx guifg=#fab387 guibg=#1e1e2e
 		BufferLineModified({ bg = mantle, fg = peach }), -- BufferLineModified xxx guifg=#fab387 guibg=#181825
 		BufferLineCloseButtonSelected({ bg = base, fg = red }), -- BufferLineCloseButtonSelected xxx guifg=#f38ba8 guibg=#1e1e2e
-		BufferLineWarningDiagnostic({ bg = mantle, fg = yellow, sp = "#baa983" }), -- BufferLineWarningDiagnostic xxx guifg=#f9e2af guibg=#181825 guisp=#baa983
-		BufferLinePick({ gui = "bold,italic", bg = "#161622", fg = red }), -- BufferLinePick xxx cterm=bold,italic gui=bold,italic guifg=#f38ba8 guibg=#161622
-		BufferLineInfoDiagnosticSelected({ bg = base, fg = sky, sp = "#66a5b0" }), -- BufferLineInfoDiagnosticSelected xxx guifg=#89dceb guibg=#1e1e2e guisp=#66a5b0
-		BufferLinePickVisible({ gui = "bold,italic", bg = "#1b1b2a", fg = red }), -- BufferLinePickVisible xxx cterm=bold,italic gui=bold,italic guifg=#f38ba8 guibg=#1b1b2a
+		BufferLinePick({ gui = "bold,italic", bg = crust, fg = red }), -- BufferLinePick xxx cterm=bold,italic gui=bold,italic guifg=#f38ba8 guibg=#161622
+		BufferLinePickVisible({ gui = "bold,italic", bg = crust, fg = red }), -- BufferLinePickVisible xxx cterm=bold,italic gui=bold,italic guifg=#f38ba8 guibg=#1b1b2a
 		BufferLinePickSelected({ gui = "bold,italic", bg = base, fg = red }), -- BufferLinePickSelected xxx cterm=bold,italic gui=bold,italic guifg=#f38ba8 guibg=#1e1e2e
-		BufferLineGroupLabel({ bg = overlay2, fg = "#101019" }), -- BufferLineGroupLabel xxx guifg=#101019 guibg=#9399b2
+		BufferLineGroupLabel({ bg = overlay2, fg = crust }), -- BufferLineGroupLabel xxx guifg=#101019 guibg=#9399b2
 		BufferLineMiniIconsGreySelected({ bg = base, fg = text }), -- BufferLineMiniIconsGreySelected xxx guifg=#cdd6f4 guibg=#1e1e2e
+
 		lualine_transitional_lualine_a_insert_to_lualine_b_insert({ gui = "nocombine", bg = surface0, fg = green }), -- lualine_transitional_lualine_a_insert_to_lualine_b_insert xxx gui=nocombine guifg=#a6e3a1 guibg=#313244
 		lualine_transitional_lualine_b_insert_to_lualine_c_normal({ gui = "nocombine", bg = mantle, fg = surface0 }), -- lualine_transitional_lualine_b_insert_to_lualine_c_normal xxx gui=nocombine guifg=#313244 guibg=#181825
 		lualine_transitional_lualine_a_normal_to_lualine_b_normal({ gui = "nocombine", bg = surface0, fg = blue }), -- lualine_transitional_lualine_a_normal_to_lualine_b_normal xxx gui=nocombine guifg=#89b4fa guibg=#313244
